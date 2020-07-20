@@ -1,4 +1,4 @@
-#Bot de discord
+# Bot de discord python
 
 Cuenta de Discord
 Antes de empezar necesitas ser propietario de un servidor o tener permisos para poder ejecutar tu bot en uno.
@@ -102,6 +102,21 @@ async def youtube(ctx, *, search):
     # I will put just the first result, you can loop the response to show more results
     await ctx.send('https://www.youtube.com/watch?v=' + search_results[0])
 ```
+
+* Puede traer información de un hash o una cuenta asociada para twitter y conocer la información paginada
+
+```python
+@bot.command()
+async def twit(ctx):
+    embed = discord.Embed(title=f"{ctx.guild.name}", description="Información twit",
+                          timestamp=datetime.datetime.utcnow(), color=discord.Color.green())
+    embed.add_field(name="Twit relevantes", value=f"{get_trends()}")
+    for tweet in get_tweets('HsJhernandez', pages=1):
+        embed.add_field(name="Twit de mi cuenta", value=f"{tweet['text']}")
+
+    await ctx.send(embed=embed)
+```
+
 * Finalmente te recomiendo visitar estos enlaces, para conocer más:
 https://discordpy.readthedocs.io/en/latest/index.html
 api scrapping de twitter

@@ -90,4 +90,4 @@ async def youtube(ctx, *, search):
 async def on_ready():
     await bot.change_presence(activity=discord.Streaming(name="Tutorials", url="http://www.twitch.tv/accountname"))
     print('Bot activo en este momento')
-bot.run('debesponertutokenaqui')
+bot.run('NzM0NDAxMDgzNjY0NzYwOTIy.XxRKaQ.i0gqAbE02jQbGb-_h1PanYnPeno')
