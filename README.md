@@ -23,7 +23,7 @@ Cabe resaltar, que una version de Python3.5 o versiones más nuevas, es necesari
 import discord
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='>')
+bot = commands.Bot(command_prefix='?')
 
 @bot.command()
 async def ping(ctx):
